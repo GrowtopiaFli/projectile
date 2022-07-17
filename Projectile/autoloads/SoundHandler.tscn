@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://autoloads/SoundHandler.gd" type="Script" id=1]
+
+[node name="SoundHandler" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Music" type="Node2D" parent="."]
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="GCTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

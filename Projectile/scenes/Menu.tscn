@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://misc/MenuExitBtn.tres" type="StyleBox" id=1]
+[ext_resource path="res://misc/MenuPlayBtn.tres" type="StyleBox" id=2]
+[ext_resource path="res://misc/MenuPlayBtnSelected.tres" type="StyleBox" id=3]
+[ext_resource path="res://misc/MenuExitBtnSelected.tres" type="StyleBox" id=4]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+resource_local_to_scene = true
+font_path = "res://assets/fonts/Montserrat.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 192
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=5]
+resource_local_to_scene = true
+font_path = "res://assets/fonts/Montserrat.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+resource_local_to_scene = true
+size = 96
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=3]
+resource_local_to_scene = true
+font_path = "res://assets/fonts/Montserrat.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+resource_local_to_scene = true
+size = 128
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 3 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.188235, 0.188235, 0.188235, 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 1920.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "PROJECTILE"
+align = 1
+
+[node name="Highscore" type="Label" parent="."]
+margin_left = 9.0
+margin_top = 208.0
+margin_right = 1929.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 6 )
+text = "Highscore: "
+align = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 720.0
+margin_top = 444.0
+margin_right = 1200.0
+margin_bottom = 636.0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 2 )
+text = "Play"
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 720.0
+margin_top = 700.0
+margin_right = 1200.0
+margin_bottom = 892.0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+text = "Exit"
